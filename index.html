@@ -11,44 +11,50 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
 background:#f5f1ea;
 color:#222;
+line-height:1.6;
 }
 
 header{
 background:#111;
-color:#fff;
+color:white;
 text-align:center;
 padding:20px;
 }
 
 .logo{
-height:90px;
+height:100px;
 margin-bottom:10px;
 }
 
 header h1{
 font-size:48px;
+letter-spacing:2px;
 }
 
 header p{
 font-size:20px;
+color:#ddd;
 }
 
 nav{
-background:#333;
-text-align:center;
+background:#2d2d2d;
 padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin:0 20px;
+margin:0 15px;
 font-weight:bold;
 }
 
@@ -58,13 +64,13 @@ linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
 url('hero.png');
 background-size:cover;
 background-position:center;
-padding:180px 20px;
-text-align:center;
 color:white;
+text-align:center;
+padding:180px 20px;
 }
 
 .hero h2{
-font-size:64px;
+font-size:70px;
 margin-bottom:20px;
 }
 
@@ -76,7 +82,7 @@ margin-bottom:30px;
 .btn{
 display:inline-block;
 padding:15px 30px;
-background:#b8860b;
+background:#b88a28;
 color:white;
 text-decoration:none;
 border-radius:8px;
@@ -89,61 +95,70 @@ background:#222;
 }
 
 section{
-padding:70px 20px;
 max-width:1200px;
 margin:auto;
+padding:80px 20px;
 }
 
 section h2{
-font-size:42px;
-margin-bottom:30px;
 text-align:center;
+font-size:42px;
+margin-bottom:40px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:25px;
 }
 
 .card{
 background:white;
-border-radius:12px;
+border-radius:15px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+box-shadow:0 4px 15px rgba(0,0,0,.12);
 }
 
 .card img{
 width:100%;
-height:250px;
+height:260px;
 object-fit:cover;
 }
 
 .card-content{
-padding:20px;
+padding:25px;
 }
 
 .card h3{
 margin-bottom:10px;
+font-size:28px;
 }
 
-.package{
-background:#2b241d;
-color:white;
-border-radius:15px;
-padding:40px;
+.card p{
+color:#555;
 }
 
-.package ul{
-margin-left:25px;
-line-height:2;
+.package-banner{
+width:100%;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+margin-bottom:40px;
 }
 
 .contact{
 background:#111;
 color:white;
 text-align:center;
-padding:60px 20px;
+padding:70px 20px;
+}
+
+.contact h2{
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:20px;
+margin:10px 0;
 }
 
 .contact a{
@@ -155,12 +170,13 @@ text-decoration:none;
 position:fixed;
 right:20px;
 bottom:20px;
-background:#06c755;
+background:#06C755;
 color:white;
-padding:15px 20px;
+padding:15px 22px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
+box-shadow:0 4px 15px rgba(0,0,0,.25);
 }
 
 footer{
@@ -172,6 +188,10 @@ padding:20px;
 
 @media(max-width:768px){
 
+.hero{
+padding:120px 20px;
+}
+
 .hero h2{
 font-size:42px;
 }
@@ -181,12 +201,17 @@ font-size:20px;
 }
 
 header h1{
-font-size:32px;
+font-size:34px;
+}
+
+.logo{
+height:70px;
 }
 }
 </style>
 
 </head>
+
 <body>
 
 <header>
@@ -194,6 +219,7 @@ font-size:32px;
 <img src="logo.png" class="logo">
 
 <h1>THE OASIS</h1>
+
 <p>Resort Living Solutions</p>
 
 </header>
@@ -213,13 +239,15 @@ font-size:32px;
 
 <a href="#packages" class="btn">ดูแพ็กเกจ</a>
 
-<a href="#contact" class="btn btn-dark">ขอใบเสนอราคา</a>
+<a href="https://docs.google.com/forms/" class="btn btn-dark">
+ขอใบเสนอราคา
+</a>
 
 </section>
 
 <section id="models">
 
-<h2>Models</h2>
+<h2>House Models</h2>
 
 <div class="grid">
 
@@ -227,7 +255,7 @@ font-size:32px;
 <img src="house1.png">
 <div class="card-content">
 <h3>Loft Tiny House 3x8 เมตร</h3>
-<p>1 ห้องนอน 1 ห้องน้ำ Pantry พร้อมระเบียง</p>
+<p>1 ห้องนอน 1 ห้องน้ำ Pantry พร้อมระเบียง เหมาะสำหรับรีสอร์ทและบ้านพักตากอากาศ</p>
 </div>
 </div>
 
@@ -235,7 +263,7 @@ font-size:32px;
 <img src="house2.png">
 <div class="card-content">
 <h3>Resort Cabin</h3>
-<p>บ้านพักแนวรีสอร์ท พร้อมปล่อยเช่า</p>
+<p>บ้านพักแนวรีสอร์ท รองรับการปล่อยเช่าและการพักผ่อนส่วนตัว</p>
 </div>
 </div>
 
@@ -243,7 +271,7 @@ font-size:32px;
 <img src="house3.jpg">
 <div class="card-content">
 <h3>Airbnb Ready Cabin</h3>
-<p>ออกแบบเพื่อสร้างรายได้จากนักท่องเที่ยว</p>
+<p>ออกแบบเพื่อการลงทุน พร้อมสร้างรายได้จากนักท่องเที่ยว</p>
 </div>
 </div>
 
@@ -253,36 +281,9 @@ font-size:32px;
 
 <section id="packages">
 
-<h2>Packages</h2>
+<h2>Packages & Pricing</h2>
 
-<div class="package">
-
-<h3>🥉 Eco Package — 499,000 บาท</h3>
-<ul>
-<li>บ้าน 3x8 เมตร</li>
-<li>1 ห้องนอน 1 ห้องน้ำ</li>
-<li>งานระบบพื้นฐาน</li>
-</ul>
-
-<br>
-
-<h3>🥈 Resort Package — 599,000 บาท</h3>
-<ul>
-<li>เพิ่มระเบียง</li>
-<li>วัสดุตกแต่งพรีเมียม</li>
-<li>พร้อมปล่อยเช่า</li>
-</ul>
-
-<br>
-
-<h3>🥇 Airbnb Ready Package — 699,000 บาท</h3>
-<ul>
-<li>เฟอร์นิเจอร์ครบ</li>
-<li>ตกแต่งพร้อมใช้งาน</li>
-<li>พร้อมสร้างรายได้ทันที</li>
-</ul>
-
-</div>
+<img src="package.png" class="package-banner">
 
 </section>
 
@@ -290,13 +291,18 @@ font-size:32px;
 
 <h2>ติดต่อเรา</h2>
 
-<p>โทร : 098-296-4512</p>
+<p>📞 098-296-4512</p>
 
 <p>
 LINE :
 <a href="https://page.line.me/993ryrkh" target="_blank">
 THE OASIS Solutions
 </a>
+</p>
+
+<p>
+เว็บไซต์ :
+https://the-oasis-living.com
 </p>
 
 </section>
