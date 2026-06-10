@@ -1,159 +1,316 @@
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE OASIS Solutions | บ้านน็อคดาวน์ รีสอร์ท และ Airbnb Cabin</title>
-<meta name="description" content="THE OASIS Solutions รับออกแบบและก่อสร้างบ้านน็อคดาวน์ Tiny House บ้านพักรีสอร์ท และ Airbnb Cabin">
+<title>THE OASIS Solutions | บ้านน็อคดาวน์รีสอร์ท</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,'Noto Sans Thai',sans-serif;background:#f5f1ea;color:#222}
-header{background:#1f1f1f;color:#fff;text-align:center;padding:35px 20px}
-header h1{margin:0;font-size:40px;letter-spacing:2px}
-header p{margin:10px 0 0;font-size:18px}
-nav{background:#333;text-align:center;padding:14px;position:sticky;top:0;z-index:10}
-nav a{color:#fff;text-decoration:none;margin:0 16px;font-weight:bold}
-.hero{background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover;padding:120px 20px;text-align:center;color:#fff}
-.hero h2{font-size:54px;margin:0 0 15px}
-.hero p{font-size:22px;margin-bottom:30px}
-.btn{display:inline-block;background:#9b7442;color:#fff;padding:15px 28px;border-radius:8px;text-decoration:none;font-weight:bold;margin:6px}
-.btn.dark{background:#222}
-section{max-width:1150px;margin:auto;padding:60px 20px}
-h2{font-size:34px;margin-bottom:20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.card{background:#fff;border-radius:14px;padding:26px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
-.card h3{font-size:24px;margin-top:0}
-.price{font-size:30px;font-weight:bold;color:#8a5c28}
-ul{line-height:1.9;padding-left:22px}
-.highlight{background:#2b241d;color:#fff;border-radius:16px;padding:40px}
-.contact{background:#1f1f1f;color:#fff;text-align:center}
-footer{background:#111;color:#ccc;text-align:center;padding:25px}
-.floating-line{position:fixed;right:18px;bottom:18px;background:#06c755;color:#fff;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 4px 20px rgba(0,0,0,.25)}
-@media(max-width:600px){
-.hero h2{font-size:36px}
-header h1{font-size:30px}
-nav a{display:inline-block;margin:6px}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f5f1ea;
+color:#222;
+}
+
+header{
+background:#111;
+color:#fff;
+text-align:center;
+padding:20px;
+}
+
+.logo{
+height:90px;
+margin-bottom:10px;
+}
+
+header h1{
+font-size:48px;
+}
+
+header p{
+font-size:20px;
+}
+
+nav{
+background:#333;
+text-align:center;
+padding:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-weight:bold;
+}
+
+.hero{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('hero.png');
+background-size:cover;
+background-position:center;
+padding:180px 20px;
+text-align:center;
+color:white;
+}
+
+.hero h2{
+font-size:64px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:28px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#b8860b;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+margin:5px;
+}
+
+.btn-dark{
+background:#222;
+}
+
+section{
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+section h2{
+font-size:42px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.package{
+background:#2b241d;
+color:white;
+border-radius:15px;
+padding:40px;
+}
+
+.package ul{
+margin-left:25px;
+line-height:2;
+}
+
+.contact{
+background:#111;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.contact a{
+color:#f5c451;
+text-decoration:none;
+}
+
+.line-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#06c755;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+background:#000;
+color:#ccc;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero h2{
+font-size:42px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+header h1{
+font-size:32px;
+}
 }
 </style>
+
 </head>
 <body>
 
 <header>
-<h1>THE OASIS Solutions</h1>
-<p>Resort Living Solutions | Knockdown House | Tiny House | Airbnb Cabin</p>
+
+<img src="logo.png" class="logo">
+
+<h1>THE OASIS</h1>
+<p>Resort Living Solutions</p>
+
 </header>
 
 <nav>
 <a href="#home">Home</a>
 <a href="#models">Models</a>
 <a href="#packages">Packages</a>
-<a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<div class="hero" id="home">
+<section class="hero" id="home">
+
 <h2>Luxury Tiny House</h2>
+
 <p>บ้านน็อคดาวน์สไตล์รีสอร์ท สำหรับพักอาศัย ปล่อยเช่า และ Airbnb</p>
-<a class="btn" href="#packages">ดูแพ็กเกจ</a>
-<a class="btn dark" href="https://docs.google.com/forms/d/e/1FAIpQLSf81N2birk_GBJfW4GYYyuRbg6rnfiSTa7Ta5sUzDxgvzgtEA/viewform?usp=header" target="_blank">ขอใบเสนอราคา</a>
-</div>
+
+<a href="#packages" class="btn">ดูแพ็กเกจ</a>
+
+<a href="#contact" class="btn btn-dark">ขอใบเสนอราคา</a>
+
+</section>
 
 <section id="models">
+
 <h2>Models</h2>
+
 <div class="grid">
+
 <div class="card">
+<img src="house1.png">
+<div class="card-content">
 <h3>Loft Tiny House 3x8 เมตร</h3>
-<p>บ้านพักขนาดกะทัดรัด เหมาะสำหรับรีสอร์ท คาเฟ่ ฟาร์มสเตย์ และบ้านพักตากอากาศ</p>
-<ul>
-<li>1 ห้องนอนชั้นลอย</li>
-<li>1 ห้องน้ำ</li>
-<li>ครัว Pantry</li>
-<li>ระเบียงชมวิว</li>
-</ul>
+<p>1 ห้องนอน 1 ห้องน้ำ Pantry พร้อมระเบียง</p>
 </div>
+</div>
+
 <div class="card">
+<img src="house2.png">
+<div class="card-content">
 <h3>Resort Cabin</h3>
-<p>บ้านพักแนวรีสอร์ท เพิ่มความสวยงามและความพร้อมสำหรับพื้นที่ท่องเที่ยว</p>
-<ul>
-<li>งานตกแต่งอบอุ่น</li>
-<li>เหมาะกับเขาใหญ่ ปากช่อง รีสอร์ท</li>
-<li>รองรับปล่อยเช่ารายวัน</li>
-</ul>
+<p>บ้านพักแนวรีสอร์ท พร้อมปล่อยเช่า</p>
 </div>
+</div>
+
 <div class="card">
+<img src="house3.jpg">
+<div class="card-content">
 <h3>Airbnb Ready Cabin</h3>
-<p>แพ็กเกจพร้อมปล่อยเช่า เหมาะสำหรับเจ้าของที่ดินที่ต้องการสร้างรายได้</p>
-<ul>
-<li>ออกแบบเพื่อถ่ายรูปสวย</li>
-<li>ฟังก์ชันครบ</li>
-<li>พร้อมทำตลาดออนไลน์</li>
-</ul>
+<p>ออกแบบเพื่อสร้างรายได้จากนักท่องเที่ยว</p>
 </div>
 </div>
+
+</div>
+
 </section>
 
 <section id="packages">
+
 <h2>Packages</h2>
-<div class="grid">
-<div class="card">
-<h3>Eco Package</h3>
-<div class="price">499,000 บาท</div>
+
+<div class="package">
+
+<h3>🥉 Eco Package — 499,000 บาท</h3>
 <ul>
-<li>บ้านน็อคดาวน์ 3x8 เมตร</li>
-<li>1 ห้องนอนชั้นลอย</li>
-<li>1 ห้องน้ำ</li>
-<li>ครัว Pantry</li>
-<li>ระบบไฟและสุขาภิบาลพื้นฐาน</li>
+<li>บ้าน 3x8 เมตร</li>
+<li>1 ห้องนอน 1 ห้องน้ำ</li>
+<li>งานระบบพื้นฐาน</li>
 </ul>
-</div>
-<div class="card">
-<h3>Resort Package</h3>
-<div class="price">599,000 บาท</div>
+
+<br>
+
+<h3>🥈 Resort Package — 599,000 บาท</h3>
 <ul>
-<li>รวมรายการ Eco Package</li>
-<li>งานตกแต่งภายในเพิ่มขึ้น</li>
-<li>ชุดครัวและสุขภัณฑ์ดีขึ้น</li>
-<li>เหมาะสำหรับรีสอร์ท</li>
+<li>เพิ่มระเบียง</li>
+<li>วัสดุตกแต่งพรีเมียม</li>
+<li>พร้อมปล่อยเช่า</li>
 </ul>
-</div>
-<div class="card">
-<h3>Airbnb Ready Package</h3>
-<div class="price">699,000 บาท</div>
+
+<br>
+
+<h3>🥇 Airbnb Ready Package — 699,000 บาท</h3>
 <ul>
-<li>รวมรายการ Resort Package</li>
-<li>ตกแต่งพร้อมถ่ายรูปขาย</li>
-<li>เหมาะสำหรับปล่อยเช่า</li>
-<li>พร้อมเข้าอยู่และใช้งานจริง</li>
+<li>เฟอร์นิเจอร์ครบ</li>
+<li>ตกแต่งพร้อมใช้งาน</li>
+<li>พร้อมสร้างรายได้ทันที</li>
 </ul>
+
 </div>
-</div>
-<p style="text-align:center;margin-top:30px">
-<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf81N2birk_GBJfW4GYYyuRbg6rnfiSTa7Ta5sUzDxgvzgtEA/viewform?usp=header" target="_blank">ขอใบเสนอราคา</a>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>ติดต่อเรา</h2>
+
+<p>โทร : 098-296-4512</p>
+
+<p>
+LINE :
+<a href="https://page.line.me/993ryrkh" target="_blank">
+THE OASIS Solutions
+</a>
 </p>
+
 </section>
 
-<section id="about">
-<div class="highlight">
-<h2>About THE OASIS Solutions</h2>
-<p>เราพัฒนาแบบบ้านน็อคดาวน์และบ้านพักรีสอร์ทสำหรับเจ้าของที่ดิน นักลงทุนรีสอร์ท และผู้ที่ต้องการสร้างบ้านพักขนาดเล็กเพื่อสร้างรายได้จากการปล่อยเช่า</p>
-<p>เน้นดีไซน์สวย ใช้งานจริง งบประมาณควบคุมได้ และเหมาะกับตลาดท่องเที่ยว เช่น เขาใหญ่ ปากช่อง และพื้นที่ธรรมชาติ</p>
-</div>
-</section>
-
-<section id="contact" class="contact">
-<h2>Contact</h2>
-<p>โทร: <strong>098-296-4512</strong></p>
-<p>LINE Official Account: THE OASIS Solutions</p>
-<a class="btn" href="tel:0982964512">โทรเลย</a>
-<a class="btn" href="https://page.line.me/993ryrkh" target="_blank">เพิ่มเพื่อน LINE</a>
-<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf81N2birk_GBJfW4GYYyuRbg6rnfiSTa7Ta5sUzDxgvzgtEA/viewform?usp=header" target="_blank">กรอกแบบฟอร์มขอราคา</a>
-</section>
+<a href="https://page.line.me/993ryrkh" target="_blank" class="line-btn">
+LINE
+</a>
 
 <footer>
-<p>© THE OASIS Solutions | Knockdown House & Resort Living</p>
-</footer>
 
-<a class="floating-line" href="https://page.line.me/993ryrkh" target="_blank">LINE</a>
+THE OASIS Solutions © 2026
+
+</footer>
 
 </body>
 </html>
+```
